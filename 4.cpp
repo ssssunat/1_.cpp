@@ -26,12 +26,12 @@ void VsatElemT( BD*& node, int num )
 void ObhodvSh( BD* root )            ////Обход в Ширину
 {
    std::queue<BD*> q;      /////////   Используем очередь в которой хранятся вершины.
-   q.push( root );                 ////если очередь непуста извлекается вершина
+   q.push( root );               
    while( q.empty() == 0 )         
    {
       BD* node = q.front();
       q.pop();
-      std::cout << node->Data << " " ;
+      std::cout << node->Data << " " ;    ////если очередь непуста извлекается вершина
       if( node->Left != NULL )
         q.push( node->Left );                     /////В очередь добовляются  дочерние. 
       if( node->Right != NULL )
